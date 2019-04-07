@@ -12,7 +12,7 @@ import { fetchProductsMatching } from './store';
   return {
     query: state.query,
     status: search.status,
-    products: search.result.map(handle => state.products[handle].result),
+    products: search.result.map(id => state.products[id].result),
   };
 })
 
@@ -51,7 +51,7 @@ export default class Empty extends Component {
       <button
         className="empty__product"
         type="button"
-        key={product.handle}
+        key={product.id}
         onClick={this.handleSelect.bind(this, product)}
       >
         <div

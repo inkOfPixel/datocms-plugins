@@ -63,19 +63,19 @@ export default class ShopifyClient {
     }).then(result => normalizeProducts(result.shop.products));
   }
 
-  productByHandle(handle) {
+  productById(id) {
     return this.fetch({
       query: `
-        query getProduct($handle: String!) {
-          shop {
-            product: productByHandle(handle: $handle) {
+        query getProduct($id: ID!) {
+          node(id: $id) {
+            ... on Product {
               ${productFragment}
             }
           }
         }
       `,
-      variables: { handle },
-    }).then(result => normalizeProduct(result.shop.product));
+      variables: { id },
+    }).then(result => normalizeProduct(result.node));
   }
 
   fetch(body) {

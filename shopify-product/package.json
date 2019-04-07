@@ -1,8 +1,8 @@
 {
-  "name": "datocms-plugin-shopify-product",
-  "homepage": "https://github.com/datocms/plugins/tree/master/shopify-product#readme",
-  "version": "0.0.5",
-  "description": "A plugin that allows users to search and select Shopify products",
+  "name": "datocms-plugin-shopify-product-id",
+  "homepage": "https://github.com/inkOfPixel/plugins/tree/master/shopify-product#readme",
+  "version": "0.0.1",
+  "description": "A plugin that allows users to search and select Shopify products, storing to datoCMS their Shopify Storefront product id instead of their product handle",
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"yarn dev\" \"yarn localtunnel\"",
@@ -20,10 +20,10 @@
     "string-field",
     "shopify"
   ],
-  "author": "DatoCMS <support@datocms.com>",
+  "author": "inkOfPixel <info@inkofpixel.com>",
   "license": "ISC",
   "datoCmsPlugin": {
-    "title": "Shopify product",
+    "title": "Shopify product id",
     "previewImage": "docs/demo.gif",
     "coverImage": "docs/cover.jpg",
     "entryPoint": "dist/index.html",

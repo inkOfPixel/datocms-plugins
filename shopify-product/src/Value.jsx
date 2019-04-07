@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 import Client from './client';
 import Price from './Price.jsx';
-import { fetchProductByHandle } from './store';
+import { fetchProductById } from './store';
 
 @connect((state, props) => {
   const product = state.products[props.value];
@@ -39,9 +39,9 @@ export default class Value extends Component {
     }
   }
 
-  findProduct(handle) {
+  findProduct(id) {
     const { client, dispatch } = this.props;
-    dispatch(fetchProductByHandle(handle, client));
+    dispatch(fetchProductById(id, client));
   }
 
   render() {
