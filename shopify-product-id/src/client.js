@@ -48,19 +48,17 @@ export default class ShopifyClient {
     return this.fetch({
       query: `
         query getProducts($query: String) {
-          shop {
-            products(first: 8, query: $query) {
-              edges {
-                node {
-                  ${productFragment}
-                }
+          products(first: 8, query: $query) {
+            edges {
+              node {
+                ${productFragment}
               }
             }
           }
         }
       `,
       variables: { query: query || null },
-    }).then(result => normalizeProducts(result.shop.products));
+    }).then(result => normalizeProducts(result.products));
   }
 
   productById(id) {
