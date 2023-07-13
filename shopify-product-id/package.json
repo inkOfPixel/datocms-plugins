@@ -1,7 +1,7 @@
 {
   "name": "datocms-plugin-shopify-product-id",
   "homepage": "https://github.com/inkOfPixel/datocms-plugins/tree/master/shopify-product-id#readme",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A plugin that allows users to search and select Shopify products, storing to datoCMS their Shopify Storefront product id instead of their product handle",
   "main": "index.js",
   "scripts": {
